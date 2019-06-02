@@ -41,6 +41,8 @@ class DogsController < ApplicationController
     # DELETE /dogs/1
     # This will be behind user authentication!!!
     def destroy
+        @dog.destroy
+        render json: {status: 204}
     end
 
     private
