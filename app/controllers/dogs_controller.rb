@@ -17,10 +17,29 @@ class DogsController < ApplicationController
         render json: @dog.to_json(include: :dog_photos)
     end
 
+    #POST /dogs
+    # This will be behind user authentication!!!
+    def create
+        dog = Dog.new(dog_params)
+
+        if dog.save
+            render json: {status: 201, dog: dog}
+        else
+            # Unprocessable entity
+            render json: {status: 422, dog: dog}
+        end
+    end
+
+
     private
 
     def get_dog
         @dog = Dog.find(params[:id])
+    end
+
+    def dog_params
+        # Returns a sanitized hash of the params with nothing extra
+        params.required(:dog).permit(:name, :breed, :temperament, :bio, :zip_code)
     end
 
 end
