@@ -1,5 +1,6 @@
 class DogsController < ApplicationController
-    before_action :get_dog, only: [:show]
+    # Find dog by id for routes in only:
+    before_action :get_dog, only: [:show, :update, :destroy]
 
     # render method takes a hash, it looks like This  
     # def index
@@ -30,6 +31,15 @@ class DogsController < ApplicationController
         end
     end
 
+    # PATCH/PUT /dogs/1
+    # This will be behind user authentication!!!
+    def update
+    end
+
+    # DELETE /dogs/1
+    # This will be behind user authentication!!!
+    def destroy
+    end
 
     private
 
