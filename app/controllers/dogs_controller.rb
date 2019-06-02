@@ -1,4 +1,5 @@
 class DogsController < ApplicationController
+    before_action :get_dog, only: [:show]
 
     # render method takes a hash, it looks like This  
     # def index
@@ -7,13 +8,19 @@ class DogsController < ApplicationController
 
     # GET /dogs
     def index
-        render json: {status: 200, dogs: Dog.all}
+        @dogs = Dog.all
+        render json: {status: 200, dogs: @dogs}
     end
 
     # GET /dogs/1
     def show
-        dog = Dog.find(params[:id])
-        render json: dog.to_json(include: :dog_photos)
+        render json: @dog.to_json(include: :dog_photos)
+    end
+
+    private
+
+    def get_dog
+        @dog = Dog.find(params[:id])
     end
 
 end
