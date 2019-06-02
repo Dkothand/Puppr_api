@@ -34,6 +34,8 @@ class DogsController < ApplicationController
     # PATCH/PUT /dogs/1
     # This will be behind user authentication!!!
     def update
+        @dog.update(dog_params)
+        render json: {dog: @dog}
     end
 
     # DELETE /dogs/1
