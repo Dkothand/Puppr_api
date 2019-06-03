@@ -27,6 +27,6 @@ DogPhoto.create([
     {img_link: "https://images.unsplash.com/photo-1494870363241-b5225be3dada", details: "Selfie of the century", dog_id: 3},
     {img_link: "https://images.unsplash.com/photo-1546659935-24325ae0493d", details: "Look at my bandana!", dog_id: 3},
     {img_link: "https://images.unsplash.com/photo-1529947320894-e522e075160f", details: "Woke up like this, #nofilter, #beyonce", dog_id: 3},
-    {img_link: "https://images.unsplash.com/photo-1505628346881-b72b27e84530", details: "Selfie of the century", dog_id: 4}
+    {img_link: "https://images.unsplash.com/photo-1505628346881-b72b27e84530", details: "Selfie of the century", dog_id: 4},
     {img_link: "https://images.unsplash.com/photo-1550165298-39a6ab9a0a6f", details: "It was such a beautiful day!", dog_id: 5}
 ])
