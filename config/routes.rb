@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  ### User routes
   resources :users do
+    # Create login route
+    collection do
+      post '/login', to: 'users#login'
+    end
+
+    # Nest dog create route within users to access user_id as param
     resources :dogs, only: [:create]
   end
-  # Removing create route from /dogs, only /users/:user_id/dogs route should create dog
+
+  ### Dog routes
   resources :dogs, except: [:create] do
     resources :dogphotos, only: [:create]
   end
