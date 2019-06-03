@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   resources :dogs do
     resources :dogphotos, only: [:create]
   end
