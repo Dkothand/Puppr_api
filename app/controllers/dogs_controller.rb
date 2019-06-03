@@ -18,10 +18,10 @@ class DogsController < ApplicationController
         render json: @dog.to_json(include: :dog_photos)
     end
 
-    #POST /dogs
-    # This will be behind user authentication!!!
+    #POST /users/:user_id/dogs
     def create
         dog = Dog.new(dog_params)
+        dog.user_id = params[:user_id]
 
         if dog.save
             render json: {status: 201, dog: dog}
