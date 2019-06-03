@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  ### Root
+  root 'welcome#index'
   ### User routes
   resources :users do
     # Create login route
