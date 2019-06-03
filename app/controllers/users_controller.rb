@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
+  before_action :authenticate_token, except: [:login, :create]
 
   # POST /users/login - user login
   def login
@@ -25,7 +26,7 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-  # POST /users
+  # POST /users - user signup
   def create
     @user = User.new(user_params)
 
@@ -68,8 +69,6 @@ class UsersController < ApplicationController
         }
       }
     end
-
-
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user
