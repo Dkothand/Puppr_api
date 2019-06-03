@@ -18,6 +18,12 @@ gem 'faker'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Use JWT for storing authentication
+gem 'jwt'
+
+# Use dotenv-rails to generate tokens through API
+gem 'dotenv-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
