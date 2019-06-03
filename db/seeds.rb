@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# User.create(username: '', password: '')
+
 Dog.create([
     {name: Faker::TvShows::BojackHorseman.character, breed: "Labrador Retriever", temperament: "Confident", bio: Faker::TvShows::BojackHorseman.quote, zip_code: "10005"},
     {name: Faker::TvShows::BojackHorseman.character, breed: "Labrador Retriever", temperament: "Independent", bio: Faker::TvShows::BojackHorseman.quote, zip_code: "10001"},
