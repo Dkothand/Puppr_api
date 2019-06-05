@@ -10,7 +10,7 @@ class DogsController < ApplicationController
     # GET /dogs
     def index
         @dogs = Dog.all
-        render json: {status: 200, dogs: @dogs}
+        render json:  @dogs.to_json(include: :dog_photos)
     end
 
     # GET /dogs/1
