@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     if user_dog
       render json: user_dog.to_json(include: :dog_photos)
     else
-      render json: error, status: :unprocessable_entity
+      render json: []
     end
   end
 
