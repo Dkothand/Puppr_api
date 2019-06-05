@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       post '/login', to: 'users#login'
     end
 
+    member do
+      get '/dog', to: 'users#get_dogs'
+    end
+
     # Nest dog create route within users to access user_id as param
     resources :dogs, only: [:create]
   end

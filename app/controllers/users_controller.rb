@@ -30,6 +30,17 @@ class UsersController < ApplicationController
     render json: get_current_user
   end
 
+  # GET /users/1/dog
+  # Get current users, dog
+  def get_dogs
+    user_dog = User.find(params[:id]).dog
+    if user_dog
+      render json: user_dog.to_json(include: :dog_photos)
+    else
+      render json: error, status: :unprocessable_entity
+    end
+  end
+
   # POST /users - user signup
   def create
     @user = User.new(user_params)
