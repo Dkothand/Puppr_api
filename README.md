@@ -1,24 +1,17 @@
-# README
+# Puppr API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- This is the API for the Puppr app, built for my final project for General Assembly's Software Engineering Immersive bootcamp.
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+- The API was built with Ruby on Rails and connected to a PostgreSQL database
 
-* System dependencies
+## Initial Design
 
-* Configuration
+<img src="../Puppr App Data Model-2019-05-31_16_04.png">
 
-* Database creation
+The initial design for the API consisted of 5 models, with relationships between the users account and their personal dogs. The original design was to have a messaging functionality between users, but due to time constraints was not implemented.
 
-* Database initialization
+## Final Design
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+After the assigned week, the tables in the user accounts are what is implemented in the API. The Communications tables will have to be built out at a future date.
